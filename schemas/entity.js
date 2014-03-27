@@ -11,4 +11,4 @@ var EntitySchema = new Schema({
 
 EntitySchema.plugin(timestamps);
 
-module.exports.EntitySchema = EntitySchema;
+module.exports = EntitySchema;
