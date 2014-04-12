@@ -3,7 +3,7 @@ var Schema     = mongoose.Schema;
 var timestamps = require('mongoose-timestamp');
 
 var EntitySchema = new Schema({
-    owner: Schema.ObjectId
+    owner: { type: Schema.ObjectId, ref: 'User' }
   , name : String
   , data : Schema.Types.Mixed
 });
