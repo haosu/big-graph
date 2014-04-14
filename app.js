@@ -1,4 +1,5 @@
 var express = require('express');
+var mongoose = require('mongoose');
 var http = require('http');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -10,6 +11,8 @@ var routes = require('./routes');
 var users = require('./routes/user');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
